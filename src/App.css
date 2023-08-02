@@ -1,0 +1,54 @@
+html,body {
+  width:100vw;
+  height: 100%;
+  margin:0;
+  padding: 0;
+}
+canvas {
+
+
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.r3f {
+  
+  width: 100vw;
+  height: 100vh;
+
+  z-index:5;
+}
+.r3f::after {
+  content:"";
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color: rgb(182, 182, 182);
+  z-index:10;
+/*   clip-path: inset(0.5rem 0.5rem 0.5rem  0.5rem round 0.75rem 0.75rem); */
+  clip-path: polygon(0% 0%, 0% 100%,/* 6 */ 2.5% 97.5%,/* 1 */ 2.5% 5%,/* 2 */ 97.5% 5%,/* 3 */ 97.5% 95%,/* 4 */ 2.5% 95%, /* 5 */0% 100%, 100% 100%, 100% 0%);
+}
+.content {
+  position: relative;
+  z-index: -2;
+}
+.content .sectiondm {
+  width:100vw;
+  height:100vh;
+  background-color: rgb(182, 182, 182);
+  display:block;
+  position: relative;
+
+}
+.content .sectiondm span {
+  width:100vw;
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
